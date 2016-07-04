@@ -1,0 +1,22 @@
+#!/bin/sh
+
+#host=`sed -n 2p Config.py | awk '{print $3}' | awk -F "'" '{print $2}'`
+#port=`sed -n 3p Config.py | awk '{print $3}' `
+#user=`sed -n 4p Config.py | awk '{print $3}' | awk -F "'" '{print $2}'`
+#passwd=`sed -n 5p Config.py | awk '{print $3}' | awk -F "'" '{print $2}'`
+#db=`sed -n 6p Config.py | awk '{print $3}' | awk -F "'" '{print $2}'`
+
+cd `dirname $0`
+host=`grep "MYSQL_HOST" Config.py | awk '{print $3}' |awk -F "'" '{print $2}'`
+port=`grep "MYSQL_PORT" Config.py | awk '{print $3}'`
+user=`grep "MYSQL_USER" Config.py | awk '{print $3}' |awk -F "'" '{print $2}'`
+passwd=`grep "MYSQL_PASS" Config.py | awk '{print $3}' |awk -F "'" '{print $2}'`
+db=`grep "MYSQL_DB" Config.py | awk '{print $3}' |awk -F "'" '{print $2}'`
+
+
+echo
+echo "IP=$host  PORT=$port USER=$user DB=$db"
+echo
+
+mysql -t -h$host -P$port -u$user -p$passwd $db -e "select * from user;"
+

@@ -1,0 +1,11 @@
+{
+    "server":"server_ip",
+    "server_port":"ss-port",
+    "local_address": "listen_address",
+    "local_port":"listen_port",
+    "password":"ss-password",
+    "timeout":300,
+    "method":"rc4-md5",
+    "fast_open": true,
+    "workers": 2
+}

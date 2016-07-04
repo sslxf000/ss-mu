@@ -1,0 +1,3 @@
+2.6.10 2015-06-08
+- Optimize LRU cache
+- Refine logging
