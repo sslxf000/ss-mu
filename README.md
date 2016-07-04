@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 shadowsocks
 ===========
 
@@ -104,3 +105,6 @@ Bugs and Issues
 [Troubleshooting]:   https://github.com/shadowsocks/shadowsocks/wiki/Troubleshooting
 [Wiki]:              https://github.com/shadowsocks/shadowsocks/wiki
 [Windows]:           https://github.com/shadowsocks/shadowsocks-csharp
+=======
+# ss-mu
+>>>>>>> cc672a7c567e363d5d8839cf09d22424a5b52b68
